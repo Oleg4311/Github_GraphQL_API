@@ -21,7 +21,8 @@
       "@components/*": ["src/components/*"],
       "@pages/*": ["./src/pages/*"],
       "@utils/*": ["utils/*"]
-    }
+    },
+    "types": ["node", "vite/client"]
   },
   "references": [{ "path": "./tsconfig.node.json" }]
 }

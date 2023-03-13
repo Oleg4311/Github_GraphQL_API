@@ -19,7 +19,6 @@ export default function Main(): ReactElement {
 
   //@ts-ignore
   const myList = useSelector((store) => store.myList);
-  console.log("🚀 ~ file: index.tsx:22 ~ Main ~ myList:", myList);
 
   const [requestRepo, setRequestRepo] = useState<string>(lastRequest);
   const [currentPage, setPage] = useState<number>(Number(lastPage));
@@ -47,10 +46,9 @@ export default function Main(): ReactElement {
   }
 
   const pages =
-  data && getRepoByPages(data.search.nodes, data.search.repositoryCount);
-  console.log("🚀 ~ file: index.tsx:50 ~ Main ~ pages:", pages)
+    data && getRepoByPages(data.search.nodes, data.search.repositoryCount);
 
-  let allRepos = pages?.repos
+  let allRepos = pages?.repos;
 
   useEffect(() => {
     if (allRepos) {
